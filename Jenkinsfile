@@ -69,14 +69,14 @@ pipeline
 					{
 					script 
 						{		
-                            echo "executing ${WORKSPACE}\\src\\build.sh"						
+                            echo "executing ${WORKSPACE}\\src\\build-hworld.sh"						
 							def sout = new StringBuffer(), serr = new StringBuffer()
 
-							def proc ="${WORKSPACE}\\src\\build.sh".execute()
+							def proc ="sh ${WORKSPACE}\\src\\build-hworld.sh ${WORKSPACE}\\src\\".execute()
 
 							proc.consumeProcessOutput(sout, serr)
 							proc.waitForOrKill(1000)
-							println sout
+							println sout													
 						}
 					}
 				}				
