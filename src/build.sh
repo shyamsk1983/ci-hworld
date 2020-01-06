@@ -1,2 +1,1 @@
-g++ tictactoe.cpp -o output -lncurses
-
+g++ program.cpp -o output -lncurses
