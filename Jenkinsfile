@@ -75,7 +75,7 @@ pipeline
 							def proc ="sudo bash ${WORKSPACE}\\src\\build-hworld.sh ${WORKSPACE}\\src\\".execute()
 
 							proc.consumeProcessOutput(sout, serr)
-							proc.waitForOrKill(1000)
+							proc.waitForOrKill(5000)
 							println sout													
 						}
 					}
