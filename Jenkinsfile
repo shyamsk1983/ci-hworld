@@ -30,7 +30,7 @@ def GetUserName (commitHash)
 pipeline
 	{
 		//agent { node { label 'JENKINS-Bldnode74' } }
-		agent none
+		agent any
 		stages
 			{
 			// clean up
