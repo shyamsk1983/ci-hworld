@@ -70,10 +70,10 @@ pipeline
 					{
 					script 
 						{		
-                            echo "executing ${WORKSPACE}\\src\\build-hworld.sh"						
+                            echo "executing ${WORKSPACE}/src/build-hworld.sh"						
 							def sout = new StringBuffer(), serr = new StringBuffer()
 
-							def proc ="sudo bash ${WORKSPACE}\\src\\build-hworld.sh ${WORKSPACE}\\src\\".execute()
+							def proc ="sudo bash ${WORKSPACE}/src/build-hworld.sh ${WORKSPACE}/src/".execute()
 
 							proc.consumeProcessOutput(sout, serr)
 							proc.waitForOrKill(5000)
