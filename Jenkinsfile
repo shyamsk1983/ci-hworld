@@ -72,7 +72,7 @@ pipeline
 						{		
                            				echo "executing ${WORKSPACE}/src/build-hworld.sh"
 							sh "echo $PWD"
-							sh "pushd ${WORKSPACE}/src/ | bash ./build-hworld.sh ${WORKSPACE}/src/"
+							sh "pushd ${WORKSPACE}/src/ ; bash ./build-hworld.sh ${WORKSPACE}/src/"
 							echo "completed build"													
 						}
 					}
