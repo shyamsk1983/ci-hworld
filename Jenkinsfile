@@ -71,7 +71,7 @@ pipeline
 					script 
 						{		
                            				echo "executing ${WORKSPACE}/src/build-hworld.sh"						
-							sh "bash ${WORKSPACE}/src/build-hworld.sh ${WORKSPACE}/src/".execute()
+							sh "bash ${WORKSPACE}/src/build-hworld.sh ${WORKSPACE}/src/"
 							echo "completed build"													
 						}
 					}
