@@ -70,14 +70,10 @@ pipeline
 					{
 					script 
 						{		
-                            echo "executing ${WORKSPACE}/src/build-hworld.sh"						
-							def sout = new StringBuffer(), serr = new StringBuffer()
-
-							def proc ="bash ./src/build-hworld.sh ${WORKSPACE}/src/".execute()
-
-							proc.consumeProcessOutput(sout, serr)
-							proc.waitForOrKill(5000)
-							println sout													
+                           				echo "executing ${WORKSPACE}/src/build-hworld.sh"
+							sh "echo $PWD"
+							sh "pushd ${WORKSPACE}/src/ ; bash ./build-hworld.sh ${WORKSPACE}/src/"
+							echo "completed build"													
 						}
 					}
 				}				
