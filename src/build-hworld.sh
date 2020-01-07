@@ -6,7 +6,7 @@ g++ hworld.cpp -o hworldoutput_1 -x 'none'
 echo "zipping output"
 tar -czvf output.tar.gz hworldoutput_1
 echo "make build folder"
-mkdir $1/build
+mkdir $1/../build
 echo "copy output.tar.gz to build folder"
-cp ./output.tar.gz $1/build/
+cp ./output.tar.gz $1/../build/
 echo "build-hworld.sh completed"
