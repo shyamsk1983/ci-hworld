@@ -70,8 +70,9 @@ pipeline
 					{
 					script 
 						{		
-                           				echo "executing ${WORKSPACE}/src/build-hworld.sh"						
-							sh "bash ${WORKSPACE}/src/build-hworld.sh ${WORKSPACE}/src/"
+                           				echo "executing ${WORKSPACE}/src/build-hworld.sh"
+							sh "echo $PWD"
+							sh "pushd ${WORKSPACE}/src/ | bash ./build-hworld.sh ${WORKSPACE}/src/"
 							echo "completed build"													
 						}
 					}
