@@ -14,6 +14,7 @@ def CleanUp(location){
 def GetUserName (commitHash)
 	{
 		// Git committer User id
+		echo "WorkSpacePath is %workspace%"
 		sh "pushd %workspace% & git show -s --format=%%an ${commitHash} > commandResult"
 		result = readFile('commandResult').trim()
 		result = result.replace(" ", "").replace("," ,"")
