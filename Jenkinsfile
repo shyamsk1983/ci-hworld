@@ -39,7 +39,8 @@ pipeline
 				{
 				steps
 					{
-					CleanUp('%workspace%')
+						cleanWs()		 
+					        //CleanUp('%workspace%')
 					}
 				}
 
