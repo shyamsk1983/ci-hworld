@@ -87,7 +87,8 @@ pipeline
 					{
 					script 
 						{		
-                           				echo "uploading output.tar.gz to cicd-buildpoc-repo/repository/cihworld/1.0/${env.BUILD_NUMBER}/"
+							sh "echo $PATH"
+							echo "uploading output.tar.gz to cicd-buildpoc-repo/repository/cihworld/1.0/${env.BUILD_NUMBER}/"
 							sh "aws s3 cp ${WORKSPACE}/build/output.tar.gz s3://cicd-buildpoc-repo/repository/cihworld/1.0/${env.BUILD_NUMBER}/output.tar.gz"
 							echo "upload successful"													
 						}
